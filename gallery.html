@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Lupine Detailing Co</title>
+  <meta name="description" content="Before & after results from Lupine Detailing Co across Newcastle & Hunter. Mobile detailing, headlight restoration, and interior services." />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">
+    <img src="Assets/logo.svg" alt="Lupine Logo">
+  </a>
+
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a class="btn-primary" href="quote.html">Get a Quote</a></li>
+  </ul>
+
+  <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <a href="services.html" onclick="closeMenu()">Services</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a class="drawer-cta" href="quote.html" onclick="closeMenu()">Get a Quote</a>
+  </div>
+
+  <div class="nav-backdrop" id="navBackdrop" onclick="closeMenu()" aria-hidden="true"></div>
+</nav>
+
+<header class="section">
+  <h2>Gallery</h2>
+  <p class="muted">
+    Before &amp; after results across the Newcastle &amp; Hunter Region. We’ll add more sets as we complete more jobs.
+  </p>
+
+  <div class="gallery-tabs" role="tablist" aria-label="Gallery categories">
+    <button class="tab active" data-tab="maintenance" type="button">Maintenance</button>
+    <button class="tab" data-tab="performance" type="button">Performance</button>
+    <button class="tab" data-tab="decon" type="button">Decon &amp; Gloss</button>
+    <button class="tab" data-tab="headlights" type="button">Headlights</button>
+    <button class="tab" data-tab="engine" type="button">Engine Bay</button>
+    <button class="tab" data-tab="extraction" type="button">Wet Extraction</button>
+  </div>
+</header>
+
+<section class="section">
+  <!-- Maintenance -->
+  <div class="gallery-panel active" id="maintenance">
+    <div class="panel-head">
+      <h3>Maintenance Detail</h3>
+      <p class="muted">Exterior refresh results (more sets coming soon).</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 01</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 02</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 03</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Performance -->
+  <div class="gallery-panel" id="performance">
+    <div class="panel-head">
+      <h3>Performance Detail</h3>
+      <p class="muted">Full interior &amp; exterior results (more sets coming soon).</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 01</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 02</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 03</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decon -->
+  <div class="gallery-panel" id="decon">
+    <div class="panel-head">
+      <h3>Decontamination &amp; Gloss Detail</h3>
+      <p class="muted">Decon + clay + gloss enhancement (more sets coming soon).</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 01</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 02</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 03</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Headlights -->
+  <div class="gallery-panel" id="headlights">
+    <div class="panel-head">
+      <h3>Headlight Restoration</h3>
+      <p class="muted">Clarity restored + UV protection (more sets coming soon).</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 01</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 02</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 03</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Engine -->
+  <div class="gallery-panel" id="engine">
+    <div class="panel-head">
+      <h3>Engine Bay Detail</h3>
+      <p class="muted">Clean, detailed finish (more sets coming soon).</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 01</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 02</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 03</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Extraction -->
+  <div class="gallery-panel" id="extraction">
+    <div class="panel-head">
+      <h3>Wet Extraction</h3>
+      <p class="muted">Carpet &amp; upholstery extraction results (more sets coming soon).</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 01</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 02</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+
+      <div class="ph card">
+        <div class="ph-top">
+          <span class="ph-chip">Set 03</span>
+          <span class="ph-chip muted">Coming soon</span>
+        </div>
+        <div class="ph-body">
+          <div class="ph-block"></div>
+          <div class="ph-block"></div>
+        </div>
+        <div class="ph-note muted">Before / After placeholders — add photos later.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:22px;">
+    <strong>Want to see specific results?</strong><br />
+    <span class="muted">Send a quote request and mention what you’d like to focus on — we’ll reply with the best matching examples.</span>
+    <div style="margin-top:14px;">
+      <a class="btn-primary" href="quote.html">Request Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="Assets/logo.svg" alt="Lupine Detailing Co">
+      <p class="muted">
+        Premium mobile detailing across the Newcastle &amp; Hunter Region.
+        We come to you — clean, transparent, and high-end results.
+      </p>
+    </div>
+
+    <div class="footer-cols">
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:0490282052">0490 282 052</a>
+        <a href="mailto:LupineDetailingCo@gmail.com">LupineDetailingCo@gmail.com</a>
+        <a href="https://share.google/Xx0BfMoYIeuOtySZR" target="_blank" rel="noopener noreferrer">Google Reviews</a>
+      </div>
+
+      <div>
+        <h4>Social</h4>
+        <a href="https://www.facebook.com/lupinedetailingco/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/lupinedetailingco/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+
+      <div>
+        <h4>Info</h4>
+        <a href="services.html">Services &amp; Pricing</a>
+        <a href="quote.html">Get a Quote</a>
+        <a href="about.html">Service Conditions</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span class="muted">Hours: 10:00–20:00 (Mon–Sun) • Travel: first 10km from Thornton included • then $0.75/km</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+  // Simple gallery tab switching (no dependencies)
+  (function(){
+    const tabs = document.querySelectorAll(".gallery-tabs .tab");
+    const panels = document.querySelectorAll(".gallery-panel");
+
+    function setActive(id){
+      tabs.forEach(t => t.classList.toggle("active", t.dataset.tab === id));
+      panels.forEach(p => p.classList.toggle("active", p.id === id));
+    }
+
+    tabs.forEach(btn => {
+      btn.addEventListener("click", () => setActive(btn.dataset.tab));
+    });
+  })();
+</script>
+
+</body>
+</html>

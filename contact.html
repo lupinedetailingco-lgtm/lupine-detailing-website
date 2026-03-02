@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Lupine Detailing Co</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">
+    <img src="Assets/logo.svg" alt="Lupine Logo">
+  </a>
+
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a class="btn-primary" href="quote.html">Get a Quote</a></li>
+  </ul>
+
+  <!-- Mobile drawer -->
+  <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <a href="services.html" onclick="closeMenu()">Services</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a class="drawer-cta" href="quote.html" onclick="closeMenu()">Get a Quote</a>
+  </div>
+
+  <div class="nav-backdrop" id="navBackdrop" onclick="closeMenu()" aria-hidden="true"></div>
+</nav>
+
+<section class="section">
+  <h2>Contact Lupine</h2>
+  <p>
+    We are a mobile detailing service operating throughout the <strong>Newcastle &amp; Hunter Region</strong>.
+    The fastest way to book is via our online quote form.
+  </p>
+</section>
+
+<section class="section">
+  <div style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:40px; align-items:start;">
+
+    <div>
+      <div class="card" style="margin-bottom:24px;">
+        <h3 style="margin-bottom:10px;">Business Hours</h3>
+        <p>Monday – Sunday</p>
+        <p>10:00 AM – 8:00 PM</p>
+      </div>
+
+      <div class="card" style="margin-bottom:24px;">
+        <h3 style="margin-bottom:10px;">Service Area</h3>
+        <p>Newcastle &amp; Hunter Region</p>
+        <p style="color:#b5b5b5; margin-top:6px;">
+          Travel within 10km of Thornton included. Beyond 10km: $0.75 per km.
+        </p>
+      </div>
+
+      <div class="card" style="margin-bottom:24px;">
+        <h3 style="margin-bottom:10px;">Direct Contact</h3>
+
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:0490282052" style="color:#b5b5b5; text-decoration:none;">
+            0490 282 052
+          </a>
+        </p>
+
+        <p style="margin-top:6px;">
+          <strong>Email:</strong>
+          <a href="mailto:LupineDetailingCo@gmail.com" style="color:#b5b5b5; text-decoration:none;">
+            LupineDetailingCo@gmail.com
+          </a>
+        </p>
+
+        <p style="margin-top:10px;">
+          <strong>Facebook:</strong>
+          <a href="https://www.facebook.com/lupinedetailingco/" target="_blank" rel="noopener noreferrer" style="color:#b5b5b5;">
+            facebook.com/lupinedetailingco
+          </a>
+        </p>
+
+        <p style="margin-top:6px;">
+          <strong>Instagram:</strong>
+          <a href="https://www.instagram.com/lupinedetailingco/" target="_blank" rel="noopener noreferrer" style="color:#b5b5b5;">
+            @lupinedetailingco
+          </a>
+        </p>
+
+        <div style="margin-top:16px;">
+          <a href="https://share.google/Xx0BfMoYIeuOtySZR" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+            Leave a Google Review
+          </a>
+        </div>
+
+        <p style="margin-top:12px; color:#b5b5b5;">
+          Typical response time: within 24 hours (often faster).
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom:10px;">To Quote Quickly</h3>
+        <p style="color:#b5b5b5; margin-bottom:10px;">
+          If you message us directly, including these helps us quote faster:
+        </p>
+        <div style="color:#b5b5b5; line-height:1.9;">
+          • Vehicle make/model/colour<br>
+          • Your suburb<br>
+          • Package you’re after<br>
+          • Photos (optional)
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="display:flex; flex-direction:column; justify-content:center;">
+      <h3 style="margin-bottom:12px;">Ready to Book?</h3>
+      <p style="margin-bottom:18px; color:#b5b5b5;">
+        Submit a quote request and we’ll confirm availability, vehicle condition, travel fee (if applicable), and final pricing before locking in your booking.
+      </p>
+      <a href="quote.html" class="btn-primary">Start Quote Request</a>
+      <p style="margin-top:12px; color:#b5b5b5; font-size:0.95rem;">
+        Calls are welcome, but the quote form is fastest.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="Assets/logo.svg" alt="Lupine Detailing Co">
+      <p class="muted">
+        Premium mobile detailing across the Newcastle &amp; Hunter Region.
+        We come to you — clean, transparent, and high-end results.
+      </p>
+    </div>
+
+    <div class="footer-cols">
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:0490282052">0490 282 052</a>
+        <a href="mailto:LupineDetailingCo@gmail.com">LupineDetailingCo@gmail.com</a>
+        <a href="https://share.google/Xx0BfMoYIeuOtySZR" target="_blank" rel="noopener noreferrer">Google Reviews</a>
+      </div>
+
+      <div>
+        <h4>Social</h4>
+        <a href="https://www.facebook.com/lupinedetailingco/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/lupinedetailingco/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+
+      <div>
+        <h4>Info</h4>
+        <a href="services.html">Services &amp; Pricing</a>
+        <a href="quote.html">Get a Quote</a>
+        <a href="about.html">Service Conditions</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span class="muted">Hours: 10:00–20:00 (Mon–Sun) • Travel: first 10km from Thornton included • then $0.75/km</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

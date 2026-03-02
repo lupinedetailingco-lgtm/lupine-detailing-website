@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Lupine Detailing Co</title>
+  <meta name="description" content="Transparent pricing for mobile detailing across Newcastle & Hunter. Packages by size, plus optional add-ons for exterior and interior." />
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">
+    <img src="Assets/logo.svg" alt="Lupine Logo">
+  </a>
+
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a class="btn-primary" href="quote.html">Get a Quote</a></li>
+  </ul>
+
+  <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <a href="services.html" onclick="closeMenu()">Services</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a class="drawer-cta" href="quote.html" onclick="closeMenu()">Get a Quote</a>
+  </div>
+
+  <div class="nav-backdrop" id="navBackdrop" onclick="closeMenu()" aria-hidden="true"></div>
+</nav>
+
+<header class="section">
+  <h2>Services &amp; Pricing</h2>
+  <p class="muted">
+    Choose the level of detail that suits your vehicle. We confirm condition, access, and any add-ons before booking.
+    Packages are priced by vehicle size.
+  </p>
+
+  <div class="cta-strip">
+    <div>
+      <strong>Mobile service:</strong> Newcastle &amp; Hunter Region<br />
+      <span class="muted">First 10km from Thornton included • then $0.75/km beyond 10km</span>
+    </div>
+    <a class="btn-primary" href="quote.html">Request Quote</a>
+  </div>
+</header>
+
+<section class="section">
+  <h2>Packages</h2>
+
+  <div class="packages-grid">
+    <article class="package card">
+      <div class="package-head">
+        <h3>Maintenance Detail</h3>
+        <span class="tag">Exterior Only</span>
+      </div>
+      <p class="muted">Exterior refresh ideal for regular upkeep.</p>
+
+      <ul class="checklist">
+        <li>Snow foam pre-wash</li>
+        <li>Two-bucket hand wash</li>
+        <li>Wheel face clean</li>
+        <li>Tyre dressing</li>
+        <li>Premium towel dry</li>
+      </ul>
+
+      <div class="price-table">
+        <div><span>Small</span><strong>$65</strong></div>
+        <div><span>Medium</span><strong>$75</strong></div>
+        <div><span>Large</span><strong>$90</strong></div>
+      </div>
+
+      <div class="package-actions">
+        <a href="quote.html" class="btn-ghost">Request Quote</a>
+      </div>
+    </article>
+
+    <article class="package card featured">
+      <div class="package-head">
+        <h3>Performance Detail</h3>
+        <span class="tag tag-glow">Most Popular</span>
+      </div>
+      <p class="muted">Full interior &amp; exterior detail with wax protection.</p>
+
+      <ul class="checklist">
+        <li>Everything in Maintenance</li>
+        <li>Door jamb clean</li>
+        <li>Machine-applied wax</li>
+        <li>Full vacuum (incl. boot)</li>
+        <li>Dash &amp; plastics cleaned</li>
+        <li>Interior glass cleaned</li>
+      </ul>
+
+      <div class="price-table">
+        <div><span>Small</span><strong>$200</strong></div>
+        <div><span>Medium</span><strong>$225</strong></div>
+        <div><span>Large</span><strong>$250</strong></div>
+      </div>
+
+      <div class="package-actions">
+        <a href="quote.html" class="btn-primary">Request Quote</a>
+      </div>
+    </article>
+
+    <article class="package card">
+      <div class="package-head">
+        <h3>Decontamination &amp; Gloss Detail</h3>
+        <span class="tag">Enhanced</span>
+      </div>
+      <p class="muted">Paint decon + clay + light gloss enhancement.</p>
+
+      <ul class="checklist">
+        <li>Everything in Performance</li>
+        <li>Clay bar decontamination</li>
+        <li>Iron decontamination treatment</li>
+        <li>Light machine polish (finishing)</li>
+        <li>Premium wax protection</li>
+        <li>Light stain removal (minor marks)</li>
+      </ul>
+
+      <div class="price-table">
+        <div><span>Small</span><strong>$400</strong></div>
+        <div><span>Medium</span><strong>$425</strong></div>
+        <div><span>Large</span><strong>$450</strong></div>
+      </div>
+
+      <p class="muted small-note">Note: Multi-stage paint correction is not currently offered.</p>
+
+      <div class="package-actions">
+        <a href="quote.html" class="btn-ghost">Request Quote</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Add-Ons</h2>
+    <p class="muted">Optional extras you can add to any package (where suitable). Hover/tap an add-on for quick info.</p>
+  </div>
+
+  <div class="addons-grid">
+    <!-- Exterior -->
+    <div class="addon card" tabindex="0">
+      <h4>Headlight Restoration</h4>
+      <p class="muted">Remove oxidation and restore clarity.</p>
+      <div class="addon-price">$110–$130</div>
+      <div class="tip">
+        Best for cloudy/UV oxidised lenses. We sand, refine and seal for a clearer finish.
+        <small>Deep internal cracking or damaged lenses may limit results.</small>
+      </div>
+    </div>
+
+    <div class="addon card" tabindex="0">
+      <h4>Engine Bay Detail</h4>
+      <p class="muted">Light–heavy grime options.</p>
+      <div class="addon-price">$90–$120</div>
+      <div class="tip">
+        Degrease and detail plastics/painted surfaces for a cleaner bay presentation.
+        <small>We avoid sensitive electronics where appropriate.</small>
+      </div>
+    </div>
+
+    <div class="addon card" tabindex="0">
+      <h4>Single Stage Machine Polish</h4>
+      <p class="muted">One-step polish + protection (not correction).</p>
+      <div class="addon-price">$200–$250</div>
+      <div class="tip">
+        Improves gloss and clarity with a single-step process, then protected.
+        <small>Not a multi-stage correction — deep scratches won’t be fully removed.</small>
+      </div>
+    </div>
+
+    <div class="addon card" tabindex="0">
+      <h4>Iron Decontamination</h4>
+      <p class="muted">Chemical decon for bonded contamination.</p>
+      <div class="addon-price">$70</div>
+      <div class="tip">
+        Helps remove iron fallout (brake dust) from paintwork before protection.
+        <small></small>
+      </div>
+    </div>
+
+    <div class="addon card" tabindex="0">
+      <h4>Ceramic Spray Wax</h4>
+      <p class="muted">Alternative protection option.</p>
+      <div class="addon-price">$30–$60</div>
+      <div class="tip">
+        Applied to a wet vehicle after washing for a slick, hydrophobic finish.
+        <small>Cannot be combined with wax or polish services.</small>
+      </div>
+    </div>
+
+    <!-- Interior -->
+    <div class="addon card" tabindex="0">
+      <h4>Pet Hair Removal</h4>
+      <p class="muted">Extra time removing stubborn pet hair.</p>
+      <div class="addon-price">$60</div>
+      <div class="tip">
+        After vacuuming, we use specialty tools to lift and remove embedded hair.
+        <small></small>
+      </div>
+    </div>
+
+    <div class="addon card" tabindex="0">
+      <h4>Carpet Wet Extraction</h4>
+      <p class="muted">Light–medium stain removal + extraction.</p>
+      <div class="addon-price">$125</div>
+      <div class="tip">
+        Deep clean carpets using wet extraction for a fresher cabin.
+        <small>Results vary by stain type/material. Some stains may not fully remove.</small>
+      </div>
+    </div>
+
+    <div class="addon card" tabindex="0">
+      <h4>Upholstery Wet Extraction</h4>
+      <p class="muted">Seat extraction + stain removal.</p>
+      <div class="addon-price">$125</div>
+      <div class="tip">
+        Wet extraction for fabric seats to reduce staining and odours.
+        <small>Results vary by stain type/material. Some stains may not fully remove.</small>
+      </div>
+    </div>
+
+    <div class="addon card" tabindex="0">
+      <h4>Pet Odour Removal</h4>
+      <p class="muted">Targeted interior odour treatment.</p>
+      <div class="addon-price">$100</div>
+      <div class="tip">
+        Helps reduce persistent pet odours through targeted treatment steps.
+        <small>Severe odours may require multiple treatments.</small>
+      </div>
+    </div>
+
+    <div class="addon card" tabindex="0">
+      <h4>Antibacterial Steam Cleaning</h4>
+      <p class="muted">Steam clean plastics &amp; tight areas.</p>
+      <div class="addon-price">$100</div>
+      <div class="tip">
+        Steam clean interior plastics, gaps and high-touch areas for a hygienic finish.
+        <small></small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Service Conditions</h2>
+
+  <div class="card">
+    <ul class="bullet-list">
+      <li><strong>Condition-based:</strong> Prices assume normal condition. Heavily soiled vehicles may require additional time/cost (quoted before work begins).</li>
+      <li><strong>Travel:</strong> First 10km from Thornton included • then $0.75/km beyond 10km.</li>
+      <li><strong>Access:</strong> Access to power and water preferred where possible.</li>
+      <li><strong>Wet extraction:</strong> Results depend on stain type/material. Some stains may not fully remove. We’ll advise expectations before proceeding.</li>
+      <li><strong>Inclusions:</strong> Light stain removal is included only in <em>Decontamination &amp; Gloss Detail</em>.</li>
+    </ul>
+
+    <div class="service-cta">
+      <div>
+        <strong>Ready to book?</strong><br />
+        <span class="muted">Send a quote request — we’ll confirm details and lock in a time.</span>
+      </div>
+      <a href="quote.html" class="btn-primary">Request Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="Assets/logo.svg" alt="Lupine Detailing Co">
+      <p class="muted">
+        Premium mobile detailing across the Newcastle &amp; Hunter Region.
+        We come to you — clean, transparent, and high-end results.
+      </p>
+    </div>
+
+    <div class="footer-cols">
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:0490282052">0490 282 052</a>
+        <a href="mailto:LupineDetailingCo@gmail.com">LupineDetailingCo@gmail.com</a>
+        <a href="https://share.google/Xx0BfMoYIeuOtySZR" target="_blank" rel="noopener noreferrer">Google Reviews</a>
+      </div>
+
+      <div>
+        <h4>Social</h4>
+        <a href="https://www.facebook.com/lupinedetailingco/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/lupinedetailingco/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+
+      <div>
+        <h4>Info</h4>
+        <a href="services.html">Services &amp; Pricing</a>
+        <a href="quote.html">Get a Quote</a>
+        <a href="about.html">Service Conditions</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span class="muted">Hours: 10:00–20:00 (Mon–Sun) • Travel: first 10km from Thornton included • then $0.75/km</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

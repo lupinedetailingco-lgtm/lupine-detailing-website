@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Quote | Lupine Detailing Co</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">
+    <img src="Assets/logo.svg" alt="Lupine Logo">
+  </a>
+
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a class="btn-primary" href="quote.html">Get a Quote</a></li>
+  </ul>
+
+  <!-- Mobile drawer -->
+  <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <a href="services.html" onclick="closeMenu()">Services</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a class="drawer-cta" href="quote.html" onclick="closeMenu()">Get a Quote</a>
+  </div>
+
+  <div class="nav-backdrop" id="navBackdrop" onclick="closeMenu()" aria-hidden="true"></div>
+</nav>
+
+<section class="section">
+  <h2>Request a Quote</h2>
+  <p>
+    Submit the details below and we’ll respond with availability and a confirmed quote.
+    Bookings are only confirmed once we review and approve your request.
+  </p>
+
+  <div style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap:30px; margin-top:26px; align-items:start;">
+
+    <!-- FORM -->
+    <div class="card">
+      <form id="quoteForm">
+
+        <div style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:16px;">
+          <div>
+            <label><strong>Name</strong></label><br>
+            <input required name="name" type="text" style="width:100%; margin-top:6px; padding:10px; border-radius:6px; border:1px solid rgba(255,255,255,0.12); background:#0b0b0d; color:#fff;">
+          </div>
+          <div>
+            <label><strong>Phone</strong></label><br>
+            <input required name="phone" type="tel" style="width:100%; margin-top:6px; padding:10px; border-radius:6px; border:1px solid rgba(255,255,255,0.12); background:#0b0b0d; color:#fff;">
+          </div>
+        </div>
+
+        <div style="margin-top:16px;">
+          <label><strong>Email</strong></label><br>
+          <input required name="email" type="email" style="width:100%; margin-top:6px; padding:10px; border-radius:6px; border:1px solid rgba(255,255,255,0.12); background:#0b0b0d; color:#fff;">
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:16px; margin-top:16px;">
+          <div>
+            <label><strong>Suburb</strong></label><br>
+            <input required name="suburb" type="text" style="width:100%; margin-top:6px; padding:10px; border-radius:6px; border:1px solid rgba(255,255,255,0.12); background:#0b0b0d; color:#fff;">
+          </div>
+          <div>
+            <label><strong>Street Address (optional)</strong></label><br>
+            <input name="street" type="text" style="width:100%; margin-top:6px; padding:10px; border-radius:6px; border:1px solid rgba(255,255,255,0.12); background:#0b0b0d; color:#fff;">
+          </div>
+        </div>
+
+        <div style="margin-top:16px;">
+          <label><strong>Vehicle (make/model/colour)</strong></label><br>
+          <input required name="vehicle" type="text" placeholder="Example: Subaru B4 – White" style="width:100%; margin-top:6px; padding:10px; border-radius:6px; border:1px solid rgba(255,255,255,0.12); background:#0b0b0d; color:#fff;">
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:16px; margin-top:16px;">
+          <div>
+            <label><strong>Package</strong></label><br>
+            <select required name="package" style="width:100%; margin-top:6px; padding:10px; border-radius:6px; border:1px solid rgba(255,255,255,0.12); background:#0b0b0d; color:#fff;">
+              <option value="">Select a package…</option>
+              <option value="Maintenance Detail">Maintenance Detail (Exterior Only)</option>
+              <option value="Performance Detail">Performance Detail</option>
+              <option value="Decontamination & Gloss Detail">Decontamination & Gloss Detail</option>
+            </select>
+          </div>
+          <div>
+            <label><strong>Vehicle Size</strong></label><br>
+            <select required name="size" style="width:100%; margin-top:6px; padding:10px; border-radius:6px; border:1px solid rgba(255,255,255,0.12); background:#0b0b0d; color:#fff;">
+              <option value="">Select size…</option>
+              <option value="Small">Small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;">
+          <label><strong>Add-ons (optional)</strong></label><br>
+          <div style="margin-top:10px; display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:10px; color:#b5b5b5;">
+            <label><input type="checkbox" name="addons" value="Headlight Restoration"> Headlight Restoration</label>
+            <label><input type="checkbox" name="addons" value="Engine Bay Detail"> Engine Bay Detail</label>
+            <label><input type="checkbox" name="addons" value="Single Stage Machine Polish"> Single Stage Machine Polish</label>
+            <label><input type="checkbox" name="addons" value="Ceramic Spray Wax"> Ceramic Spray Wax</label>
+            <label><input type="checkbox" name="addons" value="Iron Decontamination"> Iron Decontamination</label>
+            <label><input type="checkbox" name="addons" value="Pet Hair Removal"> Pet Hair Removal</label>
+            <label><input type="checkbox" name="addons" value="Wet Extraction (Carpet)"> Wet Extraction (Carpet)</label>
+            <label><input type="checkbox" name="addons" value="Wet Extraction (Upholstery)"> Wet Extraction (Upholstery)</label>
+            <label><input type="checkbox" name="addons" value="Pet Odour Removal"> Pet Odour Removal</label>
+            <label><input type="checkbox" name="addons" value="Antibacterial Steam Cleaning"> Antibacterial Steam Cleaning</label>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:16px; margin-top:16px;">
+          <div>
+            <label><strong>Preferred Date</strong></label><br>
+            <input name="date" type="date" style="width:100%; margin-top:6px; padding:10px; border-radius:6px; border:1px solid rgba(255,255,255,0.12); background:#0b0b0d; color:#fff;">
+          </div>
+          <div>
+            <label><strong>Preferred Time Window</strong></label><br>
+            <input name="timewindow" type="text" placeholder="Example: 10am–2pm" style="width:100%; margin-top:6px; padding:10px; border-radius:6px; border:1px solid rgba(255,255,255,0.12); background:#0b0b0d; color:#fff;">
+          </div>
+        </div>
+
+        <div style="margin-top:16px;">
+          <label><strong>Anything else we should know? (optional)</strong></label><br>
+          <textarea name="notes" rows="4" style="width:100%; margin-top:6px; padding:10px; border-radius:6px; border:1px solid rgba(255,255,255,0.12); background:#0b0b0d; color:#fff;"></textarea>
+        </div>
+
+        <div style="margin-top:16px; color:#b5b5b5; font-size:0.95rem; line-height:1.5;">
+          <label>
+            <input required type="checkbox" name="agree">
+            I understand bookings are confirmed only after Lupine reviews and approves my request.
+          </label>
+          <div style="margin-top:8px;">
+            Travel within 10km of Thornton is included. Beyond 10km: $0.75 per km.
+          </div>
+        </div>
+
+        <div style="margin-top:18px;">
+          <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Submit Quote Request</button>
+        </div>
+
+        <p id="formMsg" style="margin-top:14px; color:#b5b5b5;"></p>
+
+      </form>
+    </div>
+
+    <!-- SIDE INFO -->
+    <div class="card">
+      <h3 style="margin-bottom:10px;">What happens next?</h3>
+      <p style="color:#b5b5b5; margin-bottom:12px;">
+        1) You submit a quote request.<br>
+        2) We review details and confirm pricing/availability.<br>
+        3) Once approved, we lock in your booking and send confirmation.
+      </p>
+
+      <h3 style="margin:18px 0 10px;">Quick notes</h3>
+      <p style="color:#b5b5b5; line-height:1.7;">
+        • Plates and identifying details are blurred in photos.<br>
+        • Severe staining or heavy grime is quoted separately before work begins.<br>
+        • Multi-stage paint correction is not currently offered.
+      </p>
+
+      <div style="margin-top:18px;">
+        <a class="btn-ghost" href="contact.html">Prefer to message us?</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzkWCOibjXBj_SdyAlRfCOpnBEc-FL1SRNkCvx8uY4R3cVhXkmsflLdMaF-fNY8KbFH-A/exec";
+
+  const form = document.getElementById("quoteForm");
+  const msg = document.getElementById("formMsg");
+
+  // --- Test mode only appears if URL has ?test=1 ---
+  const params = new URLSearchParams(window.location.search);
+  const isTestMode = params.get("test") === "1";
+
+  // Create a small test panel (only in test mode)
+  if (isTestMode) {
+    const panel = document.createElement("div");
+    panel.className = "card";
+    panel.style.marginTop = "18px";
+    panel.innerHTML = `
+      <h3 style="margin-bottom:10px;">Test Mode</h3>
+      <p style="color:#b5b5b5; margin-bottom:12px;">
+        This panel is only visible when the page URL includes <strong>?test=1</strong>.
+      </p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button type="button" class="btn-ghost" id="btnFill">Auto-Fill Test Data</button>
+        <button type="button" class="btn-primary" id="btnFillSubmit" style="border:none; cursor:pointer;">Auto-Fill + Submit</button>
+      </div>
+      <p style="margin-top:12px; color:#b5b5b5; font-size:0.95rem;">
+        Tip: open <strong>quote.html?test=1</strong> to enable this.
+      </p>
+    `;
+
+    // Insert panel under the form message
+    msg.parentElement.appendChild(panel);
+
+    panel.querySelector("#btnFill").addEventListener("click", () => {
+      fillTestData();
+      msg.textContent = "Test data filled. You can submit normally, or use Auto-Fill + Submit.";
+    });
+
+    panel.querySelector("#btnFillSubmit").addEventListener("click", async () => {
+      fillTestData();
+      await submitForm();
+    });
+  }
+
+  function fillTestData() {
+    // Feel free to tweak values anytime
+    form.elements["name"].value = "Test Dummy";
+    form.elements["phone"].value = "0400 000 000";
+    form.elements["email"].value = "lupinedetailingco@gmail.com"; // stays internal for tests
+    form.elements["suburb"].value = "Thornton";
+    form.elements["street"].value = "12 Moorea Cl";
+    form.elements["vehicle"].value = "Suzuki Swift – White";
+    form.elements["package"].value = "Performance Detail";
+    form.elements["size"].value = "Small";
+    form.elements["timewindow"].value = "10am–2pm";
+    form.elements["notes"].value = "TEST MODE: please ignore";
+
+    // Check a couple of add-ons
+    const addonBoxes = form.querySelectorAll('input[name="addons"]');
+    addonBoxes.forEach(cb => cb.checked = false);
+
+    const toCheck = ["Headlight Restoration", "Pet Hair Removal"];
+    addonBoxes.forEach(cb => {
+      if (toCheck.includes(cb.value)) cb.checked = true;
+    });
+
+    // Tick agreement checkbox
+    form.elements["agree"].checked = true;
+  }
+
+  async function submitForm() {
+    msg.textContent = "Submitting request...";
+
+    const fd = new FormData();
+    fd.append("name", form.elements["name"].value || "");
+    fd.append("phone", form.elements["phone"].value || "");
+    fd.append("email", form.elements["email"].value || "");
+    fd.append("suburb", form.elements["suburb"].value || "");
+    fd.append("street", form.elements["street"].value || "");
+    fd.append("vehicle", form.elements["vehicle"].value || "");
+    fd.append("package", form.elements["package"].value || "");
+    fd.append("size", form.elements["size"].value || "");
+
+    const addonChecks = form.querySelectorAll('input[name="addons"]:checked');
+    addonChecks.forEach(cb => fd.append("addons", cb.value));
+
+    fd.append("preferredDate", form.elements["date"].value || "");
+    fd.append("preferredTimeWindow", form.elements["timewindow"].value || "");
+    fd.append("notes", form.elements["notes"].value || "");
+
+    try {
+      await fetch(scriptURL, {
+        method: "POST",
+        body: fd,
+        mode: "no-cors"
+      });
+
+      msg.textContent = "Quote request submitted successfully. We’ll respond within 24 hours (often faster).";
+      form.reset();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+    } catch (err) {
+      msg.textContent = "Network error. Please try again.";
+    }
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    await submitForm();
+  });
+</script>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="Assets/logo.svg" alt="Lupine Detailing Co">
+      <p class="muted">
+        Premium mobile detailing across the Newcastle &amp; Hunter Region.
+        We come to you — clean, transparent, and high-end results.
+      </p>
+    </div>
+
+    <div class="footer-cols">
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:0490282052">0490 282 052</a>
+        <a href="mailto:LupineDetailingCo@gmail.com">LupineDetailingCo@gmail.com</a>
+        <a href="https://share.google/Xx0BfMoYIeuOtySZR" target="_blank" rel="noopener noreferrer">Google Reviews</a>
+      </div>
+
+      <div>
+        <h4>Social</h4>
+        <a href="https://www.facebook.com/lupinedetailingco/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/lupinedetailingco/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+
+      <div>
+        <h4>Info</h4>
+        <a href="services.html">Services &amp; Pricing</a>
+        <a href="quote.html">Get a Quote</a>
+        <a href="about.html">Service Conditions</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span class="muted">Hours: 10:00–20:00 (Mon–Sun) • Travel: first 10km from Thornton included • then $0.75/km</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

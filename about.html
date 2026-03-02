@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Lupine Detailing Co</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">
+    <img src="Assets/logo.svg" alt="Lupine Logo">
+  </a>
+
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a class="btn-primary" href="quote.html">Get a Quote</a></li>
+  </ul>
+
+  <!-- Mobile drawer -->
+  <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <a href="services.html" onclick="closeMenu()">Services</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a class="drawer-cta" href="quote.html" onclick="closeMenu()">Get a Quote</a>
+  </div>
+
+  <div class="nav-backdrop" id="navBackdrop" onclick="closeMenu()" aria-hidden="true"></div>
+</nav>
+
+<section class="section">
+  <h2>About Lupine</h2>
+  <p>
+    Lupine Detailing Co is a locally owned mobile detailing service based in the Newcastle &amp; Hunter Region.
+    We focus on premium results, safe wash methods, and a clean, transparent experience — without the dealership price tag.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Why Choose Lupine</h2>
+
+  <div style="display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:24px; margin-top:22px;">
+    <div class="card">
+      <h3 style="margin-bottom:10px;">Local &amp; Reliable</h3>
+      <p>
+        We’re local to the Hunter region and take pride in honest service, clear communication, and consistent results.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px;">Mobile Convenience</h3>
+      <p>
+        We come to you. Home or workplace — we detail at your location so you can get on with your day.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px;">Premium Method</h3>
+      <p>
+        Safe wash techniques, quality tools, and careful finishing — designed to protect your paint and interior.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Service Area</h2>
+  <p>
+    We service Newcastle &amp; the Hunter Region.
+    Travel within 10km of Thornton is included. Travel beyond 10km is charged at $0.75 per km.
+  </p>
+</section>
+
+<section class="section">
+  <h2>What You Can Expect</h2>
+
+  <div style="display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:24px; margin-top:22px;">
+    <div class="card">
+      <h3 style="margin-bottom:10px;">Respectful Handling</h3>
+      <p>
+        We treat every vehicle with care. Loose items are handled respectfully and placed neatly unless you request otherwise.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px;">Clear Communication</h3>
+      <p>
+        If we spot anything that may require extra time (heavy stains, excessive grime), we’ll contact you before proceeding.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px;">Premium Finish</h3>
+      <p>
+        Our goal is clean, high-end results — gloss, clarity, and a cabin that feels fresh again.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Clear Service Conditions</h2>
+  <p>
+    Our pricing is based on vehicle condition and requested services. Heavily soiled vehicles or severe staining may require additional time or cost
+    (quoted before work begins). Weather may require rescheduling.
+    Access to power and water is preferred where possible.
+  </p>
+</section>
+
+<section class="section">
+  <a href="quote.html" class="btn-primary">Get a Quote</a>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="Assets/logo.svg" alt="Lupine Detailing Co">
+      <p class="muted">
+        Premium mobile detailing across the Newcastle &amp; Hunter Region.
+        We come to you — clean, transparent, and high-end results.
+      </p>
+    </div>
+
+    <div class="footer-cols">
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:0490282052">0490 282 052</a>
+        <a href="mailto:LupineDetailingCo@gmail.com">LupineDetailingCo@gmail.com</a>
+        <a href="https://share.google/Xx0BfMoYIeuOtySZR" target="_blank" rel="noopener noreferrer">Google Reviews</a>
+      </div>
+
+      <div>
+        <h4>Social</h4>
+        <a href="https://www.facebook.com/lupinedetailingco/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/lupinedetailingco/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+
+      <div>
+        <h4>Info</h4>
+        <a href="services.html">Services &amp; Pricing</a>
+        <a href="quote.html">Get a Quote</a>
+        <a href="about.html">Service Conditions</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span class="muted">Hours: 10:00–20:00 (Mon–Sun) • Travel: first 10km from Thornton included • then $0.75/km</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
